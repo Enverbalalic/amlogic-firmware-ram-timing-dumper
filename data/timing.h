@@ -305,12 +305,12 @@ typedef struct ddr_set{
 	//unsigned	char	 rever1;
 	//unsigned	char	 rever2;
 	unsigned	short	rank1_ca_vref_permil;
-	//0x3d
+	//0x3e
 	//training odt config ,only use for training
 	// [0]Odt pattern for accesses targeting rank 0. [3:0] is used for write ODT [7:4] is used for read ODT
 	// [1]Odt pattern for accesses targeting rank 1. [3:0] is used for write ODT [7:4] is used for read ODT
 	unsigned	int		dfi_odt_config;
-	//0x41
+	//0x42
 	//normal go status od config,use for normal status
 	//bit 12.  rank1 ODT default. default vulue for ODT[1] pins if theres no read/write activity.
 	//bit 11.  rank1 ODT write sel.  enable ODT[1] if there's write occur in rank1.
@@ -323,10 +323,10 @@ typedef struct ddr_set{
 	//bit 1.   rank0 odt read sel.   enable ODT[0] if there's read occur in rank0.
 	//bit 0.   rank0 odt read nsel.  enable ODT[0] if there's read occure in rank1.
 	unsigned	short	DRAMFreq[4];
-	//0x49 ---- here
+	//0x4a ---- here
 	//config dram frequency,use DRAMFreq[0],ohter reserve
 	unsigned	char	PllBypassEn;
-	//0x4A
+	//0x4b--
 	//system reserve,do not modify
 	unsigned	char	ddr_rdbi_wr_enable;
 	//0x4B
